@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MoodApp</string>
+
+    <string name="text_view">Text View</string>
+    <string name="small_button">Small Button</string>
+    <string name="medium_button">Medium Button</string>
+    <string name="large_button">Large Button</string>
+    <string name="happy_face">happy face</string>
+    <string name="custom_note_button"></string>
+    <string name="mood_history_button"></string>
+
+    <string name="day_1_history">Day 1 History</string>
+    <string name="day_2_history">Day 2 History</string>
+    <string name="day_3_history">Day 3 History</string>
+    <string name="day_4_history">Day 4 History</string>
+    <string name="day_5_history">Day 5 History</string>
+    <string name="day_6_history">Day 6 History</string>
+    <string name="day_7_history">Day 7 History</string>
+    <string name="Day_1_History_TextView_Text">Yesterday</string>
+    <string name="Day_2_History_TextView_Text">Two days ago</string>
+    <string name="Day_3_History_TextView_Text">Three days ago</string>
+    <string name="Day_4_History_TextView_Text">Four days ago</string>
+    <string name="Day_5_History_TextView_Text">Five days ago</string>
+    <string name="Day_6_History_TextView_Text">Six days ago</string>
+    <string name="Day_7_History_TextView_Text">One week ago</string>
+</resources>
