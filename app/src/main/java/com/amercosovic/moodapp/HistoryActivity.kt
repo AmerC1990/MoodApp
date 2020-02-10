@@ -189,109 +189,74 @@ class HistoryActivity : AppCompatActivity() {
         day1History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject1.moodcomment.isNotEmpty()) {
-            day1History.setCompoundDrawablesWithIntrinsicBounds(0,0,historyCommentImage1,0)
-        }
-        day1History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                        Toast.makeText(this@HistoryActivity, moodHistoryObject1.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+            day1History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage1, 0)
+
+            day1History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject1.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
 
         var historyCommentImage2 = R.drawable.history_comment_image
         day2History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject2.moodcomment.isNotEmpty()) {
             day2History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage2, 0)
-        }
-        day2History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                        Toast.makeText(this@HistoryActivity, moodHistoryObject2.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+
+            day2History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject2.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
         var historyCommentImage3 = R.drawable.history_comment_image
         day3History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject3.moodcomment.isNotEmpty()) {
             day3History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage3, 0)
-        }
-        day3History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                        Toast.makeText(this@HistoryActivity, moodHistoryObject3.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+
+            day3History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject3.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
         var historyCommentImage4 = R.drawable.history_comment_image
         day4History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject4.moodcomment.isNotEmpty()) {
             day4History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage4, 0)
-        }
-        day4History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
 
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                        Toast.makeText(this@HistoryActivity, moodHistoryObject4.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+            day4History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject4.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
         var historyCommentImage5 = R.drawable.history_comment_image
         day5History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject5.moodcomment.isNotEmpty()) {
             day5History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage5, 0)
-        }
-        day5History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= historyCommentImage5) {
-                    Toast.makeText(this@HistoryActivity, moodHistoryObject5.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+
+            day5History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject5.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
         var historyCommentImage6 = R.drawable.history_comment_image
         day6History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject6.moodcomment.isNotEmpty()) {
             day6History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage6, 0)
-        }
-        day6History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                        Toast.makeText(this@HistoryActivity, moodHistoryObject6.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
+
+            day6History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject6.moodcomment, Toast.LENGTH_LONG).show()
                     }
-                return false
-            }
-        })
+                }
+
         var historyCommentImage7 = R.drawable.history_comment_image
         day7History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
         if (moodHistoryObject7.moodcomment.isNotEmpty()) {
             day7History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage7, 0)
-        }
-        day7History.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View, event: MotionEvent): Boolean {
-                if (event.action <= MotionEvent.EDGE_RIGHT) {
-                    Toast.makeText(this@HistoryActivity, moodHistoryObject7.moodcomment,Toast.LENGTH_LONG).show()
-                        return true
-                    }
-                return false
+
+            day7History.setOnClickListener{
+                Toast.makeText(this@HistoryActivity, moodHistoryObject7.moodcomment, Toast.LENGTH_LONG).show()
             }
-        })
+        }
     }
 }
 
