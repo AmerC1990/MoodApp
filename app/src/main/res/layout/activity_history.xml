@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/history_constraint_layout"
+    android:id="@+id/history_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
@@ -11,24 +11,23 @@
     tools:context=".HistoryActivity">
 
     <TextView
-        android:id="@+id/day7History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day7History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
         android:text="@string/day_7_history"
         android:textIsSelectable="false"
         android:textSize="15sp"
-        android:textStyle="bold"
-        android:visibility="visible" />
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day6History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day6History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
@@ -37,10 +36,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day5History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day5History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
@@ -49,10 +48,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day4History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day4History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
@@ -61,10 +60,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day3History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day3History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
@@ -73,10 +72,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day2History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day2History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"
@@ -85,10 +84,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/day1History"
-        android:layout_width="360dp"
-        android:layout_height="88dp"
         android:drawableEnd="@drawable/history_comment_image"
+        android:id="@+id/day1History"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:drawablePadding="16dp"
         android:padding="7dp"
         android:paddingTop="3dp"

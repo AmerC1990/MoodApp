@@ -33,11 +33,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var alarmManager: AlarmManager
     private lateinit var pendingIntent: PendingIntent
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         val soundUp = MediaPlayer.create(this,R.raw.zapsplat_multimedia_game_tone_retro_one_up_005_44353)
         val soundDown = MediaPlayer.create(this,R.raw.zapsplat_multimedia_game_tone_stab_negative_44891)
@@ -46,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         setAlarm()
 
-
         //always use constants for file names
         val prefs = getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -54,11 +51,9 @@ class MainActivity : AppCompatActivity() {
         moodObject = Mood("", 3, System.currentTimeMillis())
         editor = prefs.edit()
 
-
         addnotebutton.setOnClickListener {
             //keep your code clean and modular. Move related functionality to their own functions, makes it easier to maintain
             showAlertDialogForComment()
-
         }
         moodhistorybutton.setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java)
@@ -70,7 +65,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwipeDown() {
                 soundDown.start()
-
 
                 moodObject.moodscore = moodObject.moodscore - 1
                 moodState = moodState - 1
@@ -89,21 +83,15 @@ class MainActivity : AppCompatActivity() {
                     4 -> showSuperhappySmile()
                     in 5..500 -> moodState--
                 }
-
                 //todo After modifying the mood score make sure to save it in the shared preferences
                 var stringData = Gson().toJson(moodObject)
                 editor.putString(PREFS_KEY_DAY_0, stringData)
                 editor.commit()
-
             }
-
             override fun onSwipeLeft() {
-
             }
-
             override fun onSwipeUp() {
-                 soundUp.start()
-
+                soundUp.start()
                 moodObject.moodscore = moodObject.moodscore + 1
                 moodState = moodState + 1
 
@@ -124,20 +112,17 @@ class MainActivity : AppCompatActivity() {
 
                 //todo After modifying the mood score make sure to save it in the shared preferences
 
-
                     var stringData = Gson().toJson(moodObject)
                     editor.putString(PREFS_KEY_DAY_0, stringData)
                     editor.commit()
 
             }
 
-
             override fun onSwipeRight() {
                 //code here
             }
         })
     }
-
     private fun setAlarm() {
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
@@ -149,7 +134,6 @@ class MainActivity : AppCompatActivity() {
         calendar.set(Calendar.HOUR,11)
         calendar.set(Calendar.MINUTE,59)
 
-
         // Starts the alarm manager
         alarmManager.setRepeating(
             AlarmManager.RTC,
@@ -158,37 +142,31 @@ class MainActivity : AppCompatActivity() {
             pendingIntent
         )
     }
-
     fun showSuperhappySmile() {
         var swipeSmile = R.drawable.smiley_superhappy
         smiley_faces.setImageResource(swipeSmile)
         constraint_layout.setBackgroundResource(R.color.banana_yellow)
     }
-
     fun showHappySmile() {
         var swipeSmile = R.drawable.smiley_happy
         smiley_faces.setImageResource(swipeSmile)
         constraint_layout.setBackgroundResource(R.color.light_sage)
     }
-
     fun showNormalSmile() {
         var swipeSmile = R.drawable.smiley_normal
         smiley_faces.setImageResource(swipeSmile)
         constraint_layout.setBackgroundResource(R.color.cornflower_blue_65)
     }
-
     fun showDisappointedSmile() {
         var swipeSmile = R.drawable.smiley_disappointed
         smiley_faces.setImageResource(swipeSmile)
         constraint_layout.setBackgroundResource(R.color.warm_grey)
     }
-
     fun showSadSmile() {
         var swipeSmile = R.drawable.smiley_sad
         smiley_faces.setImageResource(swipeSmile)
         constraint_layout.setBackgroundResource(R.color.faded_red)
     }
-
     override fun onDestroy() {
         super.onDestroy()
         // Cancels the pendingIntent if it is no longer needed after this activity is destroyed.
@@ -196,7 +174,6 @@ class MainActivity : AppCompatActivity() {
             alarmManager.cancel(pendingIntent)
         }
     }
-
     private fun showAlertDialogForComment() {
 
         //focus on your variable naming schemes
@@ -226,8 +203,6 @@ class MainActivity : AppCompatActivity() {
         val alert = moodCommentAlertDialog.create()
         alert.setTitle("Comment")
         alert.show()
-
-
     }
 }
 
