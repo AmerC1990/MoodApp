@@ -44,7 +44,7 @@ class HistoryActivity : AppCompatActivity() {
 
         val moodHistoryObject1 = Gson().fromJson(dayOne, Mood::class.java)
         day1History.setText(getString(R.string.Day_1_History_TextView_Text))
-        when (moodHistoryObject1.moodscore) {
+        when (moodHistoryObject1?.moodscore) {
             0 -> {day1History.setBackgroundResource(R.color.faded_red)
                 day1History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -61,18 +61,9 @@ class HistoryActivity : AppCompatActivity() {
                 day1History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-//        if (moodHistoryObject1.moodscore == 3) {
-//            day1History.layoutParams = LinearLayout.LayoutParams(144,175)
-//            day2History.layoutParams = LinearLayout.LayoutParams(288,175)
-//            day3History.layoutParams = LinearLayout.LayoutParams(432,175)
-//            day4History.layoutParams = LinearLayout.LayoutParams(576,175)
-//            day5History.layoutParams = LinearLayout.LayoutParams(720,175)
-//            day6History.layoutParams = LinearLayout.LayoutParams(720,175)
-//            day7History.layoutParams = LinearLayout.LayoutParams(720,175)
-//        }
         val moodHistoryObject2 = Gson().fromJson(dayTwo, Mood::class.java)
         day2History.setText(getString(R.string.Day_2_History_TextView_Text))
-        when (moodHistoryObject2.moodscore) {
+        when (moodHistoryObject2?.moodscore) {
             0 -> {day2History.setBackgroundResource(R.color.faded_red)
                 day2History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -91,7 +82,7 @@ class HistoryActivity : AppCompatActivity() {
         }
         val moodHistoryObject3 = Gson().fromJson(dayThree, Mood::class.java)
         day3History.setText(getString(R.string.Day_3_History_TextView_Text))
-        when (moodHistoryObject3.moodscore) {
+        when (moodHistoryObject3?.moodscore) {
             0 -> {day3History.setBackgroundResource(R.color.faded_red)
                 day3History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -110,7 +101,7 @@ class HistoryActivity : AppCompatActivity() {
         }
         val moodHistoryObject4 = Gson().fromJson(dayFour, Mood::class.java)
         day4History.setText(getString(R.string.Day_4_History_TextView_Text))
-        when (moodHistoryObject4.moodscore) {
+        when (moodHistoryObject4?.moodscore) {
             0 -> {day4History.setBackgroundResource(R.color.faded_red)
                 day4History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -129,7 +120,7 @@ class HistoryActivity : AppCompatActivity() {
         }
         val moodHistoryObject5 = Gson().fromJson(dayFive, Mood::class.java)
         day5History.setText(getString(R.string.Day_5_History_TextView_Text))
-        when (moodHistoryObject5.moodscore) {
+        when (moodHistoryObject5?.moodscore) {
             0 -> {day5History.setBackgroundResource(R.color.faded_red)
                 day5History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -148,7 +139,7 @@ class HistoryActivity : AppCompatActivity() {
         }
         val moodHistoryObject6 = Gson().fromJson(daySix, Mood::class.java)
         day6History.setText(getString(R.string.Day_6_History_TextView_Text))
-        when (moodHistoryObject6.moodscore) {
+        when (moodHistoryObject6?.moodscore) {
             0 -> {day6History.setBackgroundResource(R.color.faded_red)
                 day6History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
@@ -167,7 +158,7 @@ class HistoryActivity : AppCompatActivity() {
         }
         val moodHistoryObject7 = Gson().fromJson(daySeven, Mood::class.java)
         day7History.setText(getString(R.string.Day_7_History_TextView_Text))
-        when (moodHistoryObject7.moodscore) {
+        when (moodHistoryObject7?.moodscore) {
             0 -> {day7History.setBackgroundResource(R.color.faded_red)
                 day7History.layoutParams = LinearLayout.LayoutParams(144,175)
             }
