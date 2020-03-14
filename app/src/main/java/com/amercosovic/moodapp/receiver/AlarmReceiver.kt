@@ -20,7 +20,7 @@ import com.google.gson.Gson
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        Toast.makeText(context, "Today's data has been saved.", Toast.LENGTH_LONG).show()
+
         var moodObject = Mood()
         var stringData = Gson().toJson(moodObject)
         val prefs = context?.getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE)

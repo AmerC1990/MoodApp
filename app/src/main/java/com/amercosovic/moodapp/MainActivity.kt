@@ -131,8 +131,8 @@ class MainActivity : AppCompatActivity() {
         // Setting the specific time for the alarm manager to trigger the intent, here, the alarm is going off at 11:59 everyday
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = System.currentTimeMillis()
-        calendar.set(Calendar.HOUR,11)
-        calendar.set(Calendar.MINUTE,59)
+//        calendar.set(Calendar.HOUR,11)
+        calendar.set(Calendar.MINUTE,1)
 
         // Starts the alarm manager
         alarmManager.setRepeating(
