@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import androidx.core.content.edit
+import com.amercosovic.moodapp.MainActivity
 import com.amercosovic.moodapp.model.Mood
 import com.amercosovic.moodapp.utils.Constants
 import com.amercosovic.moodapp.utils.Constants.PREFS_KEY_DAY_0

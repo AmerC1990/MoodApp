@@ -179,7 +179,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage1 = R.drawable.history_comment_image
         day1History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject1.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject1.moodcomment?.isNotEmpty()) {
             day1History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage1, 0)
 
             day1History.setOnClickListener{
@@ -190,7 +190,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage2 = R.drawable.history_comment_image
         day2History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject2.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject2.moodcomment?.isNotEmpty()) {
             day2History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage2, 0)
 
             day2History.setOnClickListener{
@@ -200,7 +200,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage3 = R.drawable.history_comment_image
         day3History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject3.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject3.moodcomment?.isNotEmpty()) {
             day3History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage3, 0)
 
             day3History.setOnClickListener{
@@ -210,7 +210,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage4 = R.drawable.history_comment_image
         day4History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject4.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject4.moodcomment?.isNotEmpty()) {
             day4History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage4, 0)
 
             day4History.setOnClickListener{
@@ -220,7 +220,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage5 = R.drawable.history_comment_image
         day5History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject5.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject5.moodcomment?.isNotEmpty()) {
             day5History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage5, 0)
 
             day5History.setOnClickListener{
@@ -230,7 +230,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage6 = R.drawable.history_comment_image
         day6History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject6.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject6.moodcomment?.isNotEmpty()) {
             day6History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage6, 0)
 
             day6History.setOnClickListener{
@@ -241,7 +241,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage7 = R.drawable.history_comment_image
         day7History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject7.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject7.moodcomment?.isNotEmpty()) {
             day7History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage7, 0)
 
             day7History.setOnClickListener{
