@@ -38,26 +38,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        moodObject.moodcomment = ""
-        moodObject.moodscore = 3
-
-        val beginnerData = moodObject
-        val begginerPreferences: SharedPreferences = getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE)
-
-        begginerPreferences?.edit {
-
-            this.putString(Constants.PREFS_KEY_DAY_0, "")
-            this.putString(Constants.PREFS_KEY_DAY_1, "")
-            this.putString(Constants.PREFS_KEY_DAY_2, "")
-            this.putString(Constants.PREFS_KEY_DAY_3, "")
-            this.putString(Constants.PREFS_KEY_DAY_4, "")
-            this.putString(Constants.PREFS_KEY_DAY_5, "")
-            this.putString(Constants.PREFS_KEY_DAY_6, "")
-            this.putString(Constants.PREFS_KEY_DAY_7, "")
-            this.apply()
-        }
-        beginnerData.toString()
-
         val soundUp = MediaPlayer.create(this,R.raw.zapsplat_multimedia_game_tone_retro_one_up_005_44353)
         val soundDown = MediaPlayer.create(this,R.raw.zapsplat_multimedia_game_tone_stab_negative_44891)
 
