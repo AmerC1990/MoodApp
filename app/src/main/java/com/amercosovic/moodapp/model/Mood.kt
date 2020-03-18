@@ -12,5 +12,5 @@ data class Mood (
     var moodscore: Int = 3,
 
     @SerializedName("date")
-    var mooddate: Long? = System.currentTimeMillis()
+    var mooddate: Long = System.currentTimeMillis()
 )

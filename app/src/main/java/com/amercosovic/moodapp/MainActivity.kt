@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = System.currentTimeMillis()
         calendar.set(Calendar.HOUR,11)
-        calendar.set(Calendar.MINUTE,59)
+        calendar.set(Calendar.MINUTE,1)
 
         // Starts the alarm manager
         alarmManager.setRepeating(

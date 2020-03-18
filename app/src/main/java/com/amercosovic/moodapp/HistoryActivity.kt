@@ -13,8 +13,10 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.core.graphics.alpha
 import androidx.core.graphics.drawable.toDrawable
+import androidx.core.util.rangeTo
 import com.amercosovic.moodapp.model.Mood
 import com.amercosovic.moodapp.utils.Constants.PREFS_KEY
 import com.amercosovic.moodapp.utils.Constants.PREFS_KEY_DAY_1
@@ -175,85 +177,86 @@ class HistoryActivity : AppCompatActivity() {
                 day7History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        moodHistoryObject1 = Mood()
-        moodHistoryObject2 = Mood()
-        moodHistoryObject3 = Mood()
-        moodHistoryObject4 = Mood()
-        moodHistoryObject5 = Mood()
-        moodHistoryObject6 = Mood()
-        moodHistoryObject7 = Mood()
+        moodHistoryObject1 = Mood(dayOne.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject2 = Mood(dayTwo.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject3 = Mood(dayThree.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject4 = Mood(dayFour.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject5 = Mood(dayFive.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject6 = Mood(daySix.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+        moodHistoryObject7 = Mood(daySeven.substringBefore(delimiter = ",", missingDelimiterValue = "No Comment"), 3, System.currentTimeMillis())
+
 
 
         var historyCommentImage1 = R.drawable.history_comment_image
         day1History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject1.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject1.moodcomment.length > 13) {
             day1History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage1, 0)
 
             day1History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject1?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject1?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
 
         var historyCommentImage2 = R.drawable.history_comment_image
         day2History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject2.moodcomment.isNotEmpty() ) {
+        if (moodHistoryObject2.moodcomment.length > 13) {
             day2History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage2, 0)
 
             day2History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject2?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject2?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage3 = R.drawable.history_comment_image
         day3History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject3.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject3.moodcomment.length > 13) {
             day3History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage3, 0)
 
             day3History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject3?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject3?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage4 = R.drawable.history_comment_image
         day4History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject4.moodcomment.isNotEmpty() ) {
+        if (moodHistoryObject4.moodcomment.length > 13) {
             day4History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage4, 0)
 
             day4History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject4?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject4?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage5 = R.drawable.history_comment_image
         day5History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject5.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject5.moodcomment.length > 13) {
             day5History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage5, 0)
 
             day5History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject5?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject5?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage6 = R.drawable.history_comment_image
         day6History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject6.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject6.moodcomment.length > 13) {
             day6History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage6, 0)
 
             day6History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject6?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject6?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
                     }
                 }
 
         var historyCommentImage7 = R.drawable.history_comment_image
         day7History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject7.moodcomment.isNotEmpty()) {
+        if (moodHistoryObject7.moodcomment.length > 13) {
             day7History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage7, 0)
 
             day7History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject7?.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject7?.moodcomment?.substringAfter(":", "no comment"), Toast.LENGTH_LONG).show()
             }
         }
     }
