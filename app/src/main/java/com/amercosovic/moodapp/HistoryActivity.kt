@@ -42,7 +42,7 @@ class HistoryActivity : AppCompatActivity() {
         val daySix = sharedPreferences.getString(PREFS_KEY_DAY_6, "")
         val daySeven = sharedPreferences.getString(PREFS_KEY_DAY_7, "")
 
-        val moodHistoryObject1 = Gson().fromJson(dayOne, Mood::class.java)
+        var moodHistoryObject1 = Gson().fromJson(dayOne, Mood::class.java)
         day1History.setText(getString(R.string.Day_1_History_TextView_Text))
         when (moodHistoryObject1?.moodscore) {
             0 -> {day1History.setBackgroundResource(R.color.faded_red)
@@ -61,7 +61,7 @@ class HistoryActivity : AppCompatActivity() {
                 day1History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject2 = Gson().fromJson(dayTwo, Mood::class.java)
+        var moodHistoryObject2 = Gson().fromJson(dayTwo, Mood::class.java)
         day2History.setText(getString(R.string.Day_2_History_TextView_Text))
         when (moodHistoryObject2?.moodscore) {
             0 -> {day2History.setBackgroundResource(R.color.faded_red)
@@ -80,7 +80,7 @@ class HistoryActivity : AppCompatActivity() {
                 day2History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject3 = Gson().fromJson(dayThree, Mood::class.java)
+        var moodHistoryObject3 = Gson().fromJson(dayThree, Mood::class.java)
         day3History.setText(getString(R.string.Day_3_History_TextView_Text))
         when (moodHistoryObject3?.moodscore) {
             0 -> {day3History.setBackgroundResource(R.color.faded_red)
@@ -99,7 +99,7 @@ class HistoryActivity : AppCompatActivity() {
                 day3History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject4 = Gson().fromJson(dayFour, Mood::class.java)
+        var moodHistoryObject4 = Gson().fromJson(dayFour, Mood::class.java)
         day4History.setText(getString(R.string.Day_4_History_TextView_Text))
         when (moodHistoryObject4?.moodscore) {
             0 -> {day4History.setBackgroundResource(R.color.faded_red)
@@ -118,7 +118,7 @@ class HistoryActivity : AppCompatActivity() {
                 day4History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject5 = Gson().fromJson(dayFive, Mood::class.java)
+        var moodHistoryObject5 = Gson().fromJson(dayFive, Mood::class.java)
         day5History.setText(getString(R.string.Day_5_History_TextView_Text))
         when (moodHistoryObject5?.moodscore) {
             0 -> {day5History.setBackgroundResource(R.color.faded_red)
@@ -137,7 +137,7 @@ class HistoryActivity : AppCompatActivity() {
                 day5History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject6 = Gson().fromJson(daySix, Mood::class.java)
+        var moodHistoryObject6 = Gson().fromJson(daySix, Mood::class.java)
         day6History.setText(getString(R.string.Day_6_History_TextView_Text))
         when (moodHistoryObject6?.moodscore) {
             0 -> {day6History.setBackgroundResource(R.color.faded_red)
@@ -156,7 +156,7 @@ class HistoryActivity : AppCompatActivity() {
                 day6History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
-        val moodHistoryObject7 = Gson().fromJson(daySeven, Mood::class.java)
+        var moodHistoryObject7 = Gson().fromJson(daySeven, Mood::class.java)
         day7History.setText(getString(R.string.Day_7_History_TextView_Text))
         when (moodHistoryObject7?.moodscore) {
             0 -> {day7History.setBackgroundResource(R.color.faded_red)
@@ -175,11 +175,19 @@ class HistoryActivity : AppCompatActivity() {
                 day7History.layoutParams = LinearLayout.LayoutParams(720,175)
             }
         }
+        moodHistoryObject1 = Mood()
+        moodHistoryObject2 = Mood()
+        moodHistoryObject3 = Mood()
+        moodHistoryObject4 = Mood()
+        moodHistoryObject5 = Mood()
+        moodHistoryObject6 = Mood()
+        moodHistoryObject7 = Mood()
+
 
         var historyCommentImage1 = R.drawable.history_comment_image
         day1History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject1.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject1.moodcomment.isNotEmpty()) {
             day1History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage1, 0)
 
             day1History.setOnClickListener{
@@ -190,7 +198,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage2 = R.drawable.history_comment_image
         day2History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject2.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject2.moodcomment.isNotEmpty() ) {
             day2History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage2, 0)
 
             day2History.setOnClickListener{
@@ -200,7 +208,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage3 = R.drawable.history_comment_image
         day3History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject3.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject3.moodcomment.isNotEmpty()) {
             day3History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage3, 0)
 
             day3History.setOnClickListener{
@@ -210,7 +218,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage4 = R.drawable.history_comment_image
         day4History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject4.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject4.moodcomment.isNotEmpty() ) {
             day4History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage4, 0)
 
             day4History.setOnClickListener{
@@ -220,7 +228,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage5 = R.drawable.history_comment_image
         day5History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject5.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject5.moodcomment.isNotEmpty()) {
             day5History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage5, 0)
 
             day5History.setOnClickListener{
@@ -230,7 +238,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage6 = R.drawable.history_comment_image
         day6History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject6.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject6.moodcomment.isNotEmpty()) {
             day6History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage6, 0)
 
             day6History.setOnClickListener{
@@ -241,7 +249,7 @@ class HistoryActivity : AppCompatActivity() {
         var historyCommentImage7 = R.drawable.history_comment_image
         day7History.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
-        if (moodHistoryObject7.moodcomment?.isNotEmpty()) {
+        if (moodHistoryObject7.moodcomment.isNotEmpty()) {
             day7History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage7, 0)
 
             day7History.setOnClickListener{
