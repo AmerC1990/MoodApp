@@ -183,7 +183,7 @@ class HistoryActivity : AppCompatActivity() {
             day1History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage1, 0)
 
             day1History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject1.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject1?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
 
@@ -194,7 +194,7 @@ class HistoryActivity : AppCompatActivity() {
             day2History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage2, 0)
 
             day2History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject2.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject2?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage3 = R.drawable.history_comment_image
@@ -204,7 +204,7 @@ class HistoryActivity : AppCompatActivity() {
             day3History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage3, 0)
 
             day3History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject3.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject3?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage4 = R.drawable.history_comment_image
@@ -214,7 +214,7 @@ class HistoryActivity : AppCompatActivity() {
             day4History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage4, 0)
 
             day4History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject4.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject4?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage5 = R.drawable.history_comment_image
@@ -224,7 +224,7 @@ class HistoryActivity : AppCompatActivity() {
             day5History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage5, 0)
 
             day5History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject5.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject5?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
         var historyCommentImage6 = R.drawable.history_comment_image
@@ -234,7 +234,7 @@ class HistoryActivity : AppCompatActivity() {
             day6History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage6, 0)
 
             day6History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject6.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject6?.moodcomment, Toast.LENGTH_LONG).show()
                     }
                 }
 
@@ -245,7 +245,7 @@ class HistoryActivity : AppCompatActivity() {
             day7History.setCompoundDrawablesWithIntrinsicBounds(0, 0, historyCommentImage7, 0)
 
             day7History.setOnClickListener{
-                Toast.makeText(this@HistoryActivity, moodHistoryObject7.moodcomment, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@HistoryActivity, moodHistoryObject7?.moodcomment, Toast.LENGTH_LONG).show()
             }
         }
     }

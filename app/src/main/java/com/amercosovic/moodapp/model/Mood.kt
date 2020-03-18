@@ -8,8 +8,8 @@ data class Mood (
     var moodcomment: String = "",
 
     @SerializedName("score")
-    var moodscore: Int = 3,
+    var moodscore: Int? = 3,
 
     @SerializedName("date")
-    var mooddate: Long = System.currentTimeMillis()
+    var mooddate: Long? = System.currentTimeMillis()
 )
